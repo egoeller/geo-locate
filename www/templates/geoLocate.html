@@ -1,0 +1,31 @@
+<ion-view title="GeoLocate" hide-back-button="true">
+    <ion-content class="center" ng-controller="geoLocateController as geoLocate">
+        <div>
+            <div id="someElementId"></div>
+            <div class="padding"></div>
+            <div class="padding"></div>
+            <div class="padding"></div>
+            <div class="aligner">
+                <!--           <button class="button button-royal" ng-click="geoLocate.getCompass()">
+                    Compass
+                </button>
+                <H2>{{geoLocate.direction}}</H2>
+                <button class="button button-royal" ng-click="geoLocate.getGPS()">
+                    GPS
+                </button>
+                <H2>{{geoLocate.gps}}</H2> -->
+                <button class="button button-royal" ng-click="geoLocate.getPhoto()">
+                    Take Photo
+                </button>
+                <!--  <img id="image" ng-src="{{geoLocate.lastPhoto}}" style="max-width: 100%" ng-show="geoLocate.imageOverlay=false"> -->
+                <button ng-click="geoLocate.saveImage64()" class="button button-royal">
+                    Save Overlay
+                </button>
+            </div>
+            <div class="padding"></div>
+            <div class="padding"></div>
+            <canvas id="tempCanvas"></canvas>
+        </div>
+
+    </ion-content>
+</ion-view>
