@@ -1,0 +1,54 @@
+<!-- <ion-popover-view id="menuPopover.html" type="text/ng-template" title="menuPopover" ng-controller="geoLocateController as geoLocate">
+    <ion-header-bar>
+        <h1 class="title">Select Options</h1>
+    </ion-header-bar>
+    <ion-content>
+        Hello!
+        <button ng-click="geoLocate.showConfirm()" class="button button-royal">
+            <button ng-click="geoLocate.showConfirm()" class="button button-royal">
+    </ion-content>
+</ion-popover-view>
+ -->
+
+<ion-popover-view>
+    <ion-header-bar>
+        <h1 class="title">Select Options</h1>
+    </ion-header-bar>
+    <ion-content>
+
+
+        <div class="item item-divider">
+            Select Text Color
+        </div>
+        <ion-radio ng-model="geoLocate.text_color" ng-value="white" name="color">White</ion-radio>
+        <ion-radio ng-model="geoLocate.text_color" ng-value="black" name="color">Black</ion-radio>
+        <ion-radio ng-model="geoLocate.text_color" ng-value="blue" name="color">Blue</ion-radio>
+        <ion-radio ng-model="geoLocate.text_color" ng-value="red" name="color">Red</ion-radio>
+        <div class="item item-divider">
+
+            <!--    <ion-radio ng-repeat="item in serverSideList" ng-value="item.value" ng-model="data.serverSide" ng-change="serverSideChange(item)" name="server-side">
+            {{ item.text }}
+        </ion-radio> -->
+            <!--         <ion-toggle ng-model="geoLocate.text_colo1r" ng-value="white" toggle-class="toggle-calm">White</ion-toggle>
+        <ion-toggle ng-model="geoLocate.text_color" ng-value="black" toggle-class="toggle-calm">Black</ion-toggle>
+        <ion-toggle ng-model="geoLocate.text_color" ng-value="blue" toggle-class="toggle-calm">Blue</ion-toggle>
+        <ion-toggle ng-model="geoLocate.text_color" ng-value="red" toggle-class="toggle-calm">Red</ion-toggle> -->
+            <!--       <ion-checkbox ng-model="is">Checkbox Label</ion-checkbox> -->
+            <div class="card">
+                <div class="item item-divider">
+                    Select Text Color
+                </div>
+
+                <ion-radio ng-repeat="color in text_color" ng-value="color.value" ng-model="ctrl.text_color" ng-change="geoLocate.changeColor(color)" name="text-color">
+                    {{ color.text }}
+                </ion-radio>
+
+                Select Timestamp Format
+            </div>
+            <ion-radio ng-model="geoLocate.timestamp" ng-value="white" name="time">YYYY-MM-DD HH:MM:SS</ion-radio>
+            <ion-radio ng-model="geoLocate.timestamp" ng-value="black" name="time">MM-DD-YYYY HH:MM:SS</ion-radio>
+            <ion-radio ng-model="geoLocate.timestamp" ng-value="blue" name="time">DD-MM-YYYY HH:MM:SS</ion-radio>
+        </div>
+        <button ng-click="closePopover()">OK</button>
+    </ion-content>
+</ion-popover-view>
